@@ -1,0 +1,20 @@
+[project]
+name = "causal-lens"
+version = "1.0.0"
+description = "Estimate and diagnose causal effects from observational data (IPW, AIPW, CATE learners, E-values)."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Rahman Md Matiur" }]
+dependencies = ["numpy>=1.26", "pandas>=2.0", "scikit-learn>=1.5", "matplotlib>=3.8"]
+
+[project.optional-dependencies]
+app = ["streamlit>=1.40"]
+dev = ["pytest>=8.0", "scipy>=1.11"]
+
+[tool.setuptools]
+packages = ["causal_lens"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
